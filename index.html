@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>JavaScript In Motion</title>
+		
+		<script type="text/javascript" src="lib/jquery/jquery-1.4.2.js"></script>
+		<script type="text/javascript" src="lib/inmotion/super_bone.js"></script>
+		<script type="text/javascript" src="lib/inmotion/drawing_table.js"></script>
+		<script type="text/javascript" src="lib/inmotion/key_frame.js"></script>
+		<style type="text/css">
+			/* FAZER CSS RESET */
+			*{
+				padding: 0;
+				margin: 0;
+				border: 0;
+			}
+			
+			html, body{
+				/*overflow-x: hidden;*/
+				height: 100%;
+				width: 100%;
+				float:left;
+				/*min-width: 800px;
+				min-height: 350px;
+				*/
+			}
+			/*
+			div{
+				border: 1px black solid;
+				margin: -1px;
+				padding: 1px;
+			}*/
+			
+			#left{
+				/*height: 100%;*/
+				position: absolute;
+				width: 20%; 	/*VAR*/
+				left: 0;
+				top: 0;
+				/*max-width: 400px;*/
+				background-color: #dadada;
+			}
+				#header{
+					height: 100px;
+					position: relative;
+					background-color: #c1c1c1;
+				}
+				
+				#timeline{
+					overflow: auto;
+				}
+				
+				
+			
+			#right{
+				position: absolute;
+				left: 20%;		/*VAR*/
+				top: 0px;
+				height: 100%;
+				width: 80%;		/*VAR*/
+				text-align: center;
+				vertical-align: middle;
+				background-color: #e6e6fa;
+			}
+			
+				#console{
+					position: absolute;
+					top: 70%;
+					width: 100%;
+					height: 30%;
+					background-color: #e6fae6;
+				}
+		</style>
+		
+		<script type="text/javascript">
+			jQuery.noConflict();
+			j = jQuery;
+		</script>
+		
+		
+		<script type="text/javascript">
+			// point-zero baby ;)
+			var $key_frames = []
+			var $dt = null;
+			
+			// Aplico a Altura 
+			function resize(){
+				var h_header = jQuery('#header').css('height')
+				var h_body = jQuery('body').css('height')
+				
+				var h_timeline = parseInt(h_body) - parseInt(h_header)
+				jQuery('#timeline').css('height', h_timeline + 'px' )
+			}
+			
+			j(document).ready( function(){
+				// TODO setar funcao de resize ao invez.
+				resize()
+				
+				$dt = new DrawingTable('drawingtable')
+				$dt.reset()
+				add_key_frame()
+			})
+			
+			function add_key_frame(){
+				var num = _add_key_frame(null)
+				scroll_down()
+				_focus_key_frame(num)
+			}
+			
+			function _focus_key_frame(number){
+				(number)
+			}
+			
+			function _add_key_frame(where){
+				kf = new KeyFrame()
+				$key_frames.push(kf)
+				j('#keyframes').append('<dd>LALALA</dd>')
+				// mock
+				return $key_frames.length - 1
+			}
+			
+			function scroll_down(){
+				
+			}
+			
+			function scroll_up(){
+				
+			}
+			
+		</script>
+    </head>
+    <body>
+    	
+		<div id="left">
+    		<div id="header">
+        		<h3>JavaScript In Motion</h3>
+    		</div>
+			<div id="timeline"> 
+				<a href="javascript: add_key_frame();">[+]</a>
+					<a href="javascript: scroll_up();">/\</a>
+						<a href="javascript: scroll_down();">\/</a>
+				<dl id="keyframes"> <!-- reflects the state of the var keyframes[] -->
+					<dd class="frame-line">1</dd>
+					<dd class="frame-line">1</dd>
+					<dd class="frame-line">1</dd>
+				</dl>
+			</div>
+    	</div>
+		
+		
+		<div id="right">
+			STAGE<br/>
+			<canvas id="drawingtable" width="300px" height="300px"> </canvas>
+			
+			
+			<div id="console">
+				CONSOLE
+				
+			</div>
+		</div>
+    </body>
+</html>
