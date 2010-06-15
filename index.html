@@ -72,6 +72,20 @@
 					height: 30%;
 					background-color: #e6fae6;
 				}
+			
+			dd{
+				-moz-border-radius: 10px;
+				-webkit-border-radius: 10px;
+				border: 2px solid #0e506e;
+				width: 40%;
+				padding: 10px;
+				margin-bottom: 5px;
+				margin-left: 3px;
+			}
+			
+			.selected{
+				border: 1px dotted #1ca5e3;
+			}
 		</style>
 		
 		<script type="text/javascript">
@@ -82,10 +96,11 @@
 		
 		<script type="text/javascript">
 			// point-zero baby ;)
-			var $key_frames = []
-			var $dt = null;
+			var $kfs = []
+			var $dt = null
 			// {v: 'view', d: 'draw',  }
 			var $mode = "v"
+			var $focused_kf = null
 			
 			
 			// Aplico a Altura 
@@ -99,9 +114,8 @@
 			
 			function bind_keys(){
 				j(document).bind('keydown', 'd', function(){
-					$mode = 'd'
+					change_mode('draw')
 				});
-				
 			}
 			
 			j(document).ready( function(){
@@ -112,24 +126,23 @@
 				$dt = new DrawingTable('drawingtable')
 				$dt.reset()
 				add_key_frame()
+				j('#keyframes dd').live('click', function(e){
+					_focus_key_frame( e.target )
+				})
 			})
 			
 			function add_key_frame(){
-				var num = _add_key_frame(null)
-				scroll_down()
-				_focus_key_frame(num)
-			}
-			
-			function _focus_key_frame(number){
-				(number)
-			}
-			
-			function _add_key_frame(where){
 				kf = new KeyFrame()
-				$key_frames.push(kf)
-				j('#keyframes').append('<dd>LALALA</dd>')
-				// mock
-				return $key_frames.length - 1
+				$kfs.push(kf)
+				j('#keyframes').append('<dd>'+($kfs.length-1)+'.'+kf.preview()+'</dd>')
+				scroll_down()
+				_focus_key_frame( j('#keyframes').children(':eq('+($kfs.length-1)+')'  ) )
+			}
+			
+			function _focus_key_frame(frame_node){
+				j('.selected').removeClass('selected')
+				j(frame_node).addClass('selected')
+				//scroll there somehow == scroll_down?
 			}
 			
 			function scroll_down(){
@@ -145,17 +158,16 @@
     <body>
     	
 		<div id="left">
+			
     		<div id="header">
         		<h3>JavaScript In Motion</h3>
     		</div>
+			
 			<div id="timeline"> 
 				<a href="javascript: add_key_frame();">[+]</a>
 					<a href="javascript: scroll_up();">/\</a>
 						<a href="javascript: scroll_down();">\/</a>
-				<dl id="keyframes"> <!-- reflects the state of the var keyframes[] -->
-					<dd class="frame-line">1</dd>
-					<dd class="frame-line">1</dd>
-					<dd class="frame-line">1</dd>
+				<dl id="keyframes"> <!-- reflects the state of the var $kfs[] -->
 				</dl>
 			</div>
     	</div>
