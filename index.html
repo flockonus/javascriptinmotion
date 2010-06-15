@@ -5,6 +5,7 @@
         <title>JavaScript In Motion</title>
 		
 		<script type="text/javascript" src="lib/jquery/jquery-1.4.2.js"></script>
+		<script type="text/javascript" src="lib/jquery/jquery.hotkeys.js"></script> <!-- shall change to: http://www.openjs.com/scripts/events/keyboard_shortcuts/ -->
 		<script type="text/javascript" src="lib/inmotion/super_bone.js"></script>
 		<script type="text/javascript" src="lib/inmotion/drawing_table.js"></script>
 		<script type="text/javascript" src="lib/inmotion/key_frame.js"></script>
@@ -83,6 +84,9 @@
 			// point-zero baby ;)
 			var $key_frames = []
 			var $dt = null;
+			// {v: 'view', d: 'draw',  }
+			var $mode = "v"
+			
 			
 			// Aplico a Altura 
 			function resize(){
@@ -93,9 +97,17 @@
 				jQuery('#timeline').css('height', h_timeline + 'px' )
 			}
 			
+			function bind_keys(){
+				j(document).bind('keydown', 'd', function(){
+					$mode = 'd'
+				});
+				
+			}
+			
 			j(document).ready( function(){
 				// TODO setar funcao de resize ao invez.
 				resize()
+				bind_keys()
 				
 				$dt = new DrawingTable('drawingtable')
 				$dt.reset()
