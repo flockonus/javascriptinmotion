@@ -1,0 +1,79 @@
+/* FAZER CSS RESET */
+*{
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+
+html, body{
+	/*overflow-x: hidden;*/
+	height: 100%;
+	width: 100%;
+	float:left;
+	/*min-width: 800px;
+	min-height: 350px;
+	*/
+}
+/*
+div{
+	border: 1px black solid;
+	margin: -1px;
+	padding: 1px;
+}*/
+
+#left{
+	/*height: 100%;*/
+	position: absolute;
+	width: 20%; 	/*VAR*/
+	left: 0;
+	top: 0;
+	/*max-width: 400px;*/
+	background-color: #dadada;
+}
+	#header{
+		height: 100px;
+		position: relative;
+		background-color: #c1c1c1;
+	}
+	
+	#timeline{
+		overflow: auto;
+	}
+	
+	
+
+#right{
+	position: absolute;
+	left: 20%;		/*VAR*/
+	top: 0px;
+	height: 100%;
+	width: 80%;		/*VAR*/
+	text-align: center;
+	vertical-align: middle;
+	background-color: #e6e6fa;
+}
+	#dtcallback{
+	}
+	
+	#console{
+		position: absolute;
+		top: 70%;
+		width: 100%;
+		height: 30%;
+		background-color: #e6fae6;
+	}
+	
+
+dd{   /* www.css3.info/preview/rounded-border/*/
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border: 2px solid #0e506e;
+	width: 40%;
+	padding: 10px;
+	margin-bottom: 5px;
+	margin-left: 3px;
+}
+
+.selected{
+	border: 1px dotted #1ca5e3;
+}
