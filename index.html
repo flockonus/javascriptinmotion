@@ -27,20 +27,22 @@
 			j(document).ready( function(){
 				// TODO setar funcao de resize ao invez.
 				$e = new Editor()
-				resize()
-				bind_keys()
-				set_mode('draw0')
+				//$e.resize()
+				$e.bind_keys()
+				$e.set_mode('draw0')
 				
-				$dt = new DrawingTable('drawingtable')
-				$dt.reset()
-				add_key_frame()
+				//$dt = new DrawingTable('drawingtable')
+				//$dt.reset()
+				$e.add_key_frame()
+				
 				j('#keyframes dd').live('click', function(e){
-					_focus_key_frame( e.target )
+					$e.focus_key_frame( e.target )
 				})
 				
-				j('#right').click( function(e){
-					alert(e.target)
-				})
+				// bad arquiteture
+				//j('#right').click( function(e){
+					// it targe == canvas entao faz coisa ou nao naonaoanaoalert(e.target)
+				//})
 			})
 			
 			
@@ -55,9 +57,9 @@
     		</div>
 			
 			<div id="timeline"> 
-				<a href="javascript: add_key_frame();">[+]</a>
-					<a href="javascript: scroll_up();">/\</a>
-						<a href="javascript: scroll_down();">\/</a>
+				<a href="javascript: $e.add_key_frame();">[+]</a>
+					<a href="javascript: $e.scroll_up();">/\</a>
+						<a href="javascript: $e.scroll_down();">\/</a>
 				<dl id="keyframes"> <!-- reflects the state of the var $kfs[] -->
 				</dl>
 			</div>
