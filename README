@@ -1,3 +1,31 @@
-Hello World
+JavaScript InMotion
+===================
 
--- Still under Dev
+-- Editor under dev
+
+-- What is the idea ?
+
+This will be a JS Library that will have Moving Tween functionalities like the ones seen in Flash now a days.
+
+
+-- Progress  
+
+I decided that I would start by the editor leaving the animation core for when I had the data structure concise.
+The idea is that having the whole structure done I would be more excited to finish the most complex 
+
+
+-- Current  
+
+There is an GUI bone editor
+The shape suported now is: 'linear'
+Multiple Key Frames
+
+
+--Todo  
+
+Check Pivotal Tracker
+
+
+--Support
+  
+If you are willing to take part on this project, please let me know.
