@@ -28,22 +28,16 @@
 			j(document).ready( function(){
 				// TODO setar funcao de resize ao invez.
 				$e = new Editor()
-				//$e.resize()
+
 				$e.bind_keys()
-				$e.set_mode('draw0')
 				
-				//$dt = new DrawingTable('drawingtable')
-				//$dt.reset()
 				$e.add_key_frame()
 				
 				j('#keyframes dd').live('click', function(e){
 					$e.focus_key_frame( e.target )
 				})
 				
-				// bad arquiteture
-				//j('#right').click( function(e){
-					// it targe == canvas entao faz coisa ou nao naonaoanaoalert(e.target)
-				//})
+				$e.set_mode('draw0') 
 			})
 			
 			
@@ -73,7 +67,7 @@
 				<canvas id="drawingtable" width="400px" height="300px"> </canvas>
 				<div id="buttonpane">
 					<span class="button blue bigrounded" onclick="$e.set_mode('draw0')" id="draw_bt"> DRAW </span>
-					<span class="button blue bigrounded" onclick="$e.set_mode('move')"  id="move_bt"> MOVE </span>
+					<span class="button blue bigrounded" onclick="$e.set_mode('move0')"  id="move_bt"> MOVE </span>
 				</div>
 			
 			<div id="console">
