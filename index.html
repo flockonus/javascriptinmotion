@@ -16,7 +16,7 @@
 		<link type="text/css" rel="stylesheet" href="style/buttons.css" />
 		
 		<script type="text/javascript">
-			jQuery.noConflict();
+			//jQuery.noConflict();
 			j = jQuery;
 		</script>
 		
@@ -24,7 +24,7 @@
 		<script type="text/javascript">
 			// point-zero baby ;)
 			
-			
+			$e = null;
 			j(document).ready( function(){
 				// TODO setar funcao de resize ao invez.
 				$e = new Editor()
@@ -57,8 +57,8 @@
         		<h3>JavaScript In Motion</h3>
     		</div>
 			
-			<div id="timeline"> 
-				<a href="javascript: alert('Not REALLY implemented YET!'); return false; $e.add_key_frame();">[+]</a>
+			<div id="timeline">
+				<a href="javascript: $e.add_key_frame();">[+]</a> <!-- alert('Not REALLY implemented YET!'); return(0); -->
 					<a href="javascript: $e.scroll_up();">/\</a>
 						<a href="javascript: $e.scroll_down();">\/</a>
 				<dl id="keyframes"> <!-- reflects the state of the var $kfs[] -->
@@ -69,6 +69,7 @@
 		
 		<div id="right">
 			<span id="mode"> STAGE </span><br/>
+			
 				<canvas id="drawingtable" width="400px" height="300px"> </canvas>
 				<div id="buttonpane">
 					<span class="button blue bigrounded" onclick="$e.set_mode('draw0')" id="draw_bt"> DRAW </span>
