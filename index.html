@@ -24,6 +24,12 @@
 		<script type="text/javascript">
 			// point-zero baby ;)
 			
+			var $console = j('#console')
+			function log( info ){
+			  j('#console').prepend( info )
+			  return(true)
+			}
+			
 			$e = null;
 			j(document).ready( function(){
 				// TODO setar funcao de resize ao invez.

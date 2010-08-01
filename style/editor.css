@@ -67,7 +67,7 @@ div{
 dd{   /* www.css3.info/preview/rounded-border/*/
 	-moz-border-radius: 10px;
 	-webkit-border-radius: 10px;
-	border: 2px solid #0e506e;
+  border: 1px dotted #1ca5e3;	
 	width: 40%;
 	padding: 10px;
 	margin-bottom: 5px;
@@ -75,5 +75,5 @@ dd{   /* www.css3.info/preview/rounded-border/*/
 }
 
 .selected{
-	border: 1px dotted #1ca5e3;
+	border: 2px solid #0e506e;
 }
