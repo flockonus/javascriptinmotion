@@ -5,7 +5,8 @@
         <title>JavaScript In Motion</title>
 		
 		<script type="text/javascript" src="lib/jquery/jquery-1.4.2.js">   </script>
-		<!--script type="text/javascript" src="lib/jquery/jquery.hotkeys.js"> </script>  shall change to: http://www.openjs.com/scripts/events/keyboard_shortcuts/ -->
+		
+		<script type="text/javascript" src="lib/misc/shortcut.js"> </script>  shall change to: http://www.openjs.com/scripts/events/keyboard_shortcuts/ -->
 		
 		<script type="text/javascript" src="lib/inmotion/editor.js"        ></script>
 		<script type="text/javascript" src="lib/inmotion/super_bone.js"    ></script>
@@ -35,8 +36,6 @@
 				// TODO setar funcao de resize ao invez.
 				$e = new Editor()
 
-				$e.bind_keys()
-				
 				$e.add_key_frame()
 				
 				j('#keyframes dd').live('click', function(e){
@@ -58,13 +57,13 @@
     		</div>
 			
 			<div id="timeline">
-				<a href="javascript: $e.add_key_frame();">[+]</a> <!-- alert('Not REALLY implemented YET!'); return(0); -->
-					<a href="javascript: $e.scroll_up();">/\</a>
-						<a href="javascript: $e.scroll_down();">\/</a>
+				<a href="javascript: $e.add_key_frame();" title="Shortcut: A" >[+]</a> <!-- alert('Not REALLY implemented YET!'); return(0); -->
+					<a href="#previous" onclick="$e.focus_key_frame('prev'); return false;" title="Shortcut: PageUp" >/\</a>
+						<a href="#next" onclick="$e.focus_key_frame('next'); return false;" title="Shortcut: PageDown" >\/</a>
 				<dl id="keyframes"> <!-- reflects the state of the var $kfs[] -->
 				</dl>
 			</div>
-    	</div>
+  	</div>
 		
 		
 		<div id="right">
@@ -72,8 +71,8 @@
 			
 				<canvas id="drawingtable" width="400px" height="300px"> </canvas>
 				<div id="buttonpane">
-					<span class="button blue bigrounded" onclick="$e.set_mode('draw0')" id="draw_bt"> DRAW </span>
-					<span class="button blue bigrounded" onclick="$e.set_mode('move0')"  id="move_bt"> MOVE </span>
+					<span class="button blue bigrounded" title="Shortcut: D" onclick="$e.set_mode('draw0')" id="draw_bt"> DRAW </span>
+					<span class="button blue bigrounded" title="Shortcut: M" onclick="$e.set_mode('move0')"  id="move_bt"> MOVE </span>
 				</div>
 			
 			<div id="console">

@@ -23,11 +23,15 @@ Being able to move Bones
 Fully able to KFs data  
 
 
---Todo  
+-- Todo  
 
 Animate!  
+Shortcuts  
 
 
+-- Bugs
+
+Adding a KF clones the current KF instead of the last one OR the new KF should be added imediately after the current
 
 
 --Support
