@@ -1,6 +1,13 @@
 JavaScript InMotion
 ===================
 
+-- Similars
+I found out just now, that currently are working Libs that do much much more than mine is supposed to do. Still my aproach is todo fewer things ligther and do being able to program animations the graphic way much like Flash does, anyway, the discovery was a bummer. 
+http://github.com/biilly/doodle-js
+http://glimr.rubyforge.org/cake/canvas.html
+
+
+
 -- Editor under dev
 
 -- What is the idea ?
