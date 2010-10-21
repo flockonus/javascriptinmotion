@@ -1,0 +1,50 @@
+== JavaScript InMotion
+
+The designer friendly 2D Canvas animation framework.
+
+
+-- What is the idea ?  
+
+This will be a JS Library that will have a Tween functionality like the ones seen in Flash for a while.
+
+
+-- Progress  
+
+Being able to animate - 21/10/2010
+I decided that I would start by the editor leaving the animation core for when I had the data structure concise. **Done!** 
+
+
+-- Current  
+
+* Animation Preview!
+* There is an GUI bone editor  
+* The shape suported now is: 'linear'
+* Multiple Key Frames (shading the last bones from the past KF)
+* Being able to move Bones
+
+
+-- Todo  
+
+1. Add a bone edition panel
+2. Export the code in the console
+
+
+-- Bugs
+
+1. Adding a bone to a frame does not replicate the same bone to other frames.
+
+
+--Support
+  
+If you are willing to take part on this project, please let me know.
+
+
+== License
+
+1. You are free to use this library and improve the source, as long as you preserve my credit.
+2. You may use this library at any project without my consent. 
+3. Case you use this library on any commercial project you own me 1% of the profit of project every month.
+4. You may call this a dual license :)
+
+
+fabianosoriani on [gmail[ com
