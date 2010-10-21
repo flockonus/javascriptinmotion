@@ -14,10 +14,10 @@ This library is able to paint on the same canvas along other librarys ('unobtrus
 
     var im = new InMotion('canvas_id'); // Set a InMotion
     im.register( 'base', 'Some editor exported string here' ); // Bind a model structure to a name 
-		im.create_animation('preview', 'base'); // Create a new animation from the registered model
-		im.play('preview'); // Set the animation as playing
-		
-		routine = setInterval('loop_preview()', 30 ); // set a animation routine
+    im.create_animation('preview', 'base'); // Create a new animation from the registered model
+    im.play('preview'); // Set the animation as playing
+    
+    routine = setInterval('loop_preview()', 30 ); // set a animation routine
     
     function loop_preview(){
       if( im.step(true) ) clearInterval( routine );
