@@ -32,15 +32,15 @@ I decided that I would start by the editor leaving the animation core for when I
 
 *Current*  
 
--Animation Preview!
--There is an GUI bone editor  
--The shape supported now is: 'linear'
--Multiple Key Frames (shading the last bones from the past KF)
--Being able to move Bones
--Keyboard shortcuts  
-  
-  
-*Main TODO list*  
+Animation Preview!  
+There is an GUI bone editor    
+The shape supported now is: 'linear'  
+Multiple Key Frames (shading the last bones from the past KF)  
+Being able to move Bones  
+Keyboard shortcuts  
+
+
+*Main Todo list*
   
 1. Add a bone edition panel
 2. Export the code in the console
