@@ -1,6 +1,6 @@
 == JavaScript InMotion
 
-The designer friendly 2D Canvas animation framework.
+The designer friendly 2D Canvas animation framework. {LIVE v0.0.1}[link:http://inmotion.jaeh.net]
 
 
 -- What is the idea ?  
