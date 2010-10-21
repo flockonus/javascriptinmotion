@@ -40,8 +40,8 @@ Being able to move Bones
 Keyboard shortcuts  
 
 
-*Main Todo list*
-  
+*Main Todo list*  
+
 1. Add a bone edition panel
 2. Export the code in the console
 3. Implement all InMotion core methods
