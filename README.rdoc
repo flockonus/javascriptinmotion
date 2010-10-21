@@ -1,40 +1,59 @@
 == JavaScript InMotion
 
-The designer friendly 2D Canvas animation framework. {LIVE v0.0.1}[link:http://inmotion.jaeh.net]
+The designer friendly 2D Canvas animation framework. *LIVE DEMO* => http://inmotion.jaeh.net
 
 
--- What is the idea ?  
+- *What is the idea ?* 
 
 This will be a JS Library that will have a Tween functionality like the ones seen in Flash for a while.
+The main advantage will be the ease of use, make the animation process simple and productive, while maintaining the code customizable.
+Several animations may run in parallel, through the handy InMotion.step() method
+This library is able to paint on the same canvas along other librarys ('unobtrusive')
+
+- *Code example*
+
+    var im = new InMotion('canvas_id'); // Set a InMotion
+    im.register( 'base', 'Some editor exported string here' ); // Bind a model structure to a name 
+		im.create_animation('preview', 'base'); // Create a new animation from the registered model
+		im.play('preview'); // Set the animation as playing
+		
+		routine = setInterval('loop_preview()', 30 ); // set a animation routine
+    
+    function loop_preview(){
+      if( im.step(true) ) clearInterval( routine );
+    }
+
+== Meta-Data
+- *Progress*
+
+Being able to preview animations - 21/10/2010
+I decided that I would start by the editor leaving the animation core for when I had the data structure concise. *Done!*
 
 
--- Progress  
-
-Being able to animate - 21/10/2010
-I decided that I would start by the editor leaving the animation core for when I had the data structure concise. **Done!** 
-
-
--- Current  
+- *Current*  
 
 * Animation Preview!
 * There is an GUI bone editor  
-* The shape suported now is: 'linear'
+* The shape supported now is: 'linear'
 * Multiple Key Frames (shading the last bones from the past KF)
 * Being able to move Bones
+* Keyboard shortcuts
 
 
--- Todo  
+- *Main TODO list*  
 
 1. Add a bone edition panel
 2. Export the code in the console
+3. Implement all InMotion core methods
+4. Support a image(by url) as 'skin' to the bones
 
 
--- Bugs
+- *Bugs*
 
 1. Adding a bone to a frame does not replicate the same bone to other frames.
 
 
---Support
+- *Support*
   
 If you are willing to take part on this project, please let me know.
 
