@@ -1,16 +1,16 @@
 == JavaScript InMotion
 
-The designer friendly 2D Canvas animation framework. *LIVE DEMO* => http://inmotion.jaeh.net
+The designer friendly 2D Canvas animation framework. <b>LIVE DEMO</b> => http://inmotion.jaeh.net
 
 
-*What is the idea ?* 
+<b>What is the idea ?</b>
 
 This will be a JS Library that will have a Tween functionality like the ones seen in Flash for a while.
 The main advantage will be the ease of use, make the animation process simple and productive, while maintaining the code customizable.
 Several animations may run in parallel, through the handy InMotion.step() method
 This library is able to paint on the same canvas along other librarys ('unobtrusive')
 
-*Code example*
+<b>Code example</b>
 
     var im = new InMotion('canvas_id'); // Set a InMotion
     im.register( 'base', 'Some editor exported string here' ); // Bind a model structure to a name 
@@ -24,13 +24,13 @@ This library is able to paint on the same canvas along other librarys ('unobtrus
     }
 
 == Meta-Data
-*Progress*
+<b>Progress</b>
 
 Being able to preview animations - 21/10/2010
 I decided that I would start by the editor leaving the animation core for when I had the data structure concise. *Done!*
 
 
-*Current*  
+<b>Current</b>
 
 Animation Preview!  
 There is an GUI bone editor    
@@ -40,7 +40,7 @@ Being able to move Bones
 Keyboard shortcuts  
 
 
-*Main Todo list*  
+<b>Main Todo list</b>
 
 1. Add a bone edition panel
 2. Export the code in the console
@@ -48,12 +48,12 @@ Keyboard shortcuts
 4. Support a image(by url) as 'skin' to the bones
 
 
-*Bugs*
+<b>Bugs</b>
 
 1. Adding a bone to a frame does not replicate the same bone to other frames.
 
 
-*Support*
+<b>Support</b>
   
 If you are willing to take part on this project, please let me know.
 
