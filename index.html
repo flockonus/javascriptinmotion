@@ -9,6 +9,7 @@
 		<script type="text/javascript" src="lib/misc/shortcut.js"> </script>  <!-- shall change to: http://www.openjs.com/scripts/events/keyboard_shortcuts/ -->
 		
 		<script type="text/javascript" src="lib/misc/flockonus_utils.js"        ></script>
+		<script type="text/javascript" src="lib/inmotion/img_manager.js"        ></script>
 		<script type="text/javascript" src="lib/inmotion/core.js"        ></script>
 		<script type="text/javascript" src="lib/inmotion/tween.js"        ></script>
 		
@@ -36,7 +37,9 @@
 			}
 			
 			$e = null;
+			$im = null;
 			j(document).ready( function(){
+				$im = new InMotion('drawingtable')
 				// TODO setar funcao de resize ao invez.
 				$e = new Editor()
 
@@ -46,7 +49,27 @@
 					$e.focus_key_frame( e.target )
 				})
 				
-				$e.set_mode('draw0') 
+				$e.set_mode('draw0')
+				
+				
+				
+				
+				// FUGLY test for Image rendering
+				
+				
+				
+				var exp_string = "({"+
+   "'511848sb' : ["+
+     "{ visible: true, p1x:-85, p1y:68, p2x:158, p2y:50, shape:'linear', animation: 'default', duration:0.5, img_url: 'exp/marara.png'},"+
+     "{ visible: true, p1x:-85, p1y:68, p2x:-87, p2y:-99, shape:'linear', animation: 'default', duration:0.5, img_url: 'exp/marara.png'},"+
+     "{ visible: true, p1x:-85, p1y:68, p2x:-149, p2y:46, shape:'linear', animation: 'default', duration:0.5, img_url: 'exp/marara.png'}"+
+    "]"+
+"})"
+				$im.register( 'base', exp_string );
+				$im.create_animation('preview', 'base');
+				$im.play('preview');
+				clearInterval( $e.preview_routine );
+				$e.preview_routine = setInterval('$e.loop_preview()', 30 );
 			})
 			
 			
@@ -61,15 +84,29 @@
 						 <em style="font-size: 70%, vertical-align: top;">by <a href="http://twitter.com/flockonus">@FlockonUS</a> <a href="http://github.com/flockonus/javascriptinmotion">GitHub</a></em><br/>
 						<span class="button blue bigrounded" title="Shortcut: P" onclick="$e.set_mode('preview0')" id="play_bt">  PLAY &gt; </span>
     		</div>
+			<div id="bonepane">
+				<h4>Bone Panel</h4>
+				<div class="content">
+					<i>new bone info will appear here</i>
+					<form action="javascript: $e.apply_bonepane( this );" onsubmit="" > <!-- gotta apply some buble cancel here -->
+						<input type="hidden" name="original_name" /> 
+						Name:<input type="text" name="name" size="14" maxlength="14" /> <br/>
+						Image Url:<input type="text" name="img_url" size="14" maxlength="255" /> <br/>
+						<button type="submit" onc > OK</button>
+					</form>
+				</div>
+			</div> 
+			
 			
 			<div id="timeline">
+				<h4>Timeline</h4>
 				<a href="javascript: $e.add_key_frame();" title="Shortcut: A" >[+]</a> <!-- alert('Not REALLY implemented YET!'); return(0); -->
 					<a href="#previous" onclick="$e.focus_key_frame('prev'); return false;" title="Shortcut: PageUp" >/\</a>
 						<a href="#next" onclick="$e.focus_key_frame('next'); return false;" title="Shortcut: PageDown" >\/</a>
 				<dl id="keyframes"> <!-- reflects the state of the var $kfs[] -->
 				</dl>
 			</div>
-  	</div>
+		</div>
 		
 		
 		<div id="right">
