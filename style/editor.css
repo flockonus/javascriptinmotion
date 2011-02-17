@@ -57,10 +57,11 @@ div{
 	
 	#console{
 		position: absolute;
-		top: 90%;
+		top: 80%;
 		width: 100%;
 		height: 20%;
 		background-color: #e6fae6;
+		overflow-y: scroll;
 	}
 	
 

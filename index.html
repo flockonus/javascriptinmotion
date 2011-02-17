@@ -65,11 +65,13 @@
      "{ visible: true, p1x:-85, p1y:68, p2x:-149, p2y:46, shape:'linear', animation: 'default', duration:0.5, img_url: 'exp/marara.png'}"+
     "]"+
 "})"
-				$im.register( 'base', exp_string );
-				$im.create_animation('preview', 'base');
-				$im.play('preview');
-				clearInterval( $e.preview_routine );
-				$e.preview_routine = setInterval('$e.loop_preview()', 30 );
+				function prev_img(){
+					$im.create_animation('preview', 'base');
+					//$im.play('preview');
+					clearInterval( $e.preview_routine );
+					$e.preview_routine = setInterval('$e.loop_preview()', 30 );
+				}
+				$im.register( 'base', exp_string, prev_img );
 			})
 			
 			
@@ -80,7 +82,7 @@
 		<div id="left">
 			
     		<div id="header">
-        		<h3>JavaScript In Motion v0.01</h3>
+        		<h3>JavaScript In Motion v0.0.2</h3>
 						 <em style="font-size: 70%, vertical-align: top;">by <a href="http://twitter.com/flockonus">@FlockonUS</a> <a href="http://github.com/flockonus/javascriptinmotion">GitHub</a></em><br/>
 						<span class="button blue bigrounded" title="Shortcut: P" onclick="$e.set_mode('preview0')" id="play_bt">  PLAY &gt; </span>
     		</div>
