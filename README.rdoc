@@ -33,19 +33,24 @@ I decided that I would start by the editor leaving the animation core for when I
 <b>Current</b>
 
 Animation Preview!  
-There is an GUI bone editor    
+There is an GUI bone (primitive) editor    
 The shape supported now is: 'linear'  
 Multiple Key Frames (shading the last bones from the past KF)  
+Supporting a image(by url) as 'skin' to the bones
 Being able to move Bones  
-Keyboard shortcuts  
+Added a primitive bone edition panel  
+Keyboard shortcuts
+Exporting the code in the console  
 
 
 <b>Main Todo list</b>
 
-1. Add a bone edition panel
-2. Export the code in the console
-3. Implement all InMotion core methods
-4. Support a image(by url) as 'skin' to the bones
+1. Make a simple animation player (scalable)  
+2. Make it able to import animations  
+3. Improve bone edition panel  
+4. Import the code in the console  
+5. Implement all InMotion core methods  
+  
 
 
 <b>Bugs</b>

@@ -2,9 +2,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head> 
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+				
         <title>JavaScript In Motion : Editor </title>
 		
-		<script type="text/javascript" src="lib/jquery/jquery-1.4.2.js">   </script>
+		<script charset="utf-8" type="text/javascript" src="lib/jquery/jquery-1.4.2.js">   </script>
 		
 		<script type="text/javascript" src="lib/misc/shortcut.js"> </script>  <!-- shall change to: http://www.openjs.com/scripts/events/keyboard_shortcuts/ -->
 		
@@ -20,6 +21,7 @@
 		
 		<link type="text/css" rel="stylesheet" href="style/editor.css" />
 		<link type="text/css" rel="stylesheet" href="style/buttons.css" />
+		<link type="text/css" rel="stylesheet" href="style/my_modal.css" />
 		
 		<script type="text/javascript">
 			//jQuery.noConflict();
@@ -54,9 +56,9 @@
 				
 				
 				
+				
+				
 				// FUGLY test for Image rendering
-				
-				
 				
 				var exp_string = "({"+
    "'img_test_sb' : ["+
@@ -71,7 +73,7 @@
 					clearInterval( $e.preview_routine );
 					$e.preview_routine = setInterval('$e.loop_preview()', 30 );
 				}
-				$im.register( 'base', exp_string, preload_img_cb );
+				//$im.register( 'base', exp_string, preload_img_cb );
 			})
 			
 			
@@ -82,8 +84,9 @@
 		<div id="left">
 			
     		<div id="header">
-        		<h3>JavaScript In Motion v0.0.2</h3>
+        		<h3>JavaScript In Motion v0.2.1</h3>
 						 <em style="font-size: 70%, vertical-align: top;">by <a href="http://twitter.com/flockonus">@FlockonUS</a> <a href="http://github.com/flockonus/javascriptinmotion">GitHub</a></em><br/>
+						 <a href="#mostrae" onclick=" j('.blackout:first').fadeIn() ;return false;"> HELP </a> 
 						<span class="button blue bigrounded" title="Shortcut: P" onclick="$e.set_mode('preview0')" id="play_bt">  PLAY &gt; </span>
     		</div>
 			<div id="bonepane">
@@ -125,5 +128,28 @@
 				
 			</div>
 		</div>
+		
+		
+		
+		
+		
+	<div id="help1" class="blackout"> .
+		<div class="modal">
+			<div class="header">
+				Oi cabeçaça <a onclick="j('.blackout:first').fadeOut()" class="close"> [X] </a>
+			</div>
+			<div class="body">
+				OI CORPO
+			</div> 
+		</div>
+	</div>
+
+
+		
+		
+		
+		
+		
+		
     </body>
 </html>

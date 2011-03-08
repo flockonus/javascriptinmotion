@@ -1,0 +1,42 @@
+.blackout {
+	position: absolute;
+	z-index: 100;
+	top: 0px;
+	left: 0px;
+	margin: 0 0 0 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.8 );
+	text-align: center;
+	vertical-align: middle;
+	color: white;
+	padding: 0 0 0 0;
+	display: none;
+}
+
+.blackout .modal {
+	color: #333;
+	margin: 10% 10% 10% 10%;
+	border: groove #71B0B8 2px;
+	text-align: center;
+	vertical-align: middle;
+	background-color: #F0F0F0;
+}
+
+.blackout .modal .header {
+	border-bottom: groove #8BD8E1 4px;
+	text-align: center;
+	vertical-align: middle;
+	background-color: #679CA6;
+	font-size: x-large;
+	font-weight: bolder;
+	font-variant: small-caps;
+	margin-bottom: 10px;
+}
+
+.modal .header .close {
+	color: black;
+	float: right;
+	margin-right: 10px;
+	cursor: pointer;
+}
