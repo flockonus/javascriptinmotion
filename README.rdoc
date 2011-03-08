@@ -32,16 +32,16 @@ I decided that I would start by the editor leaving the animation core for when I
 
 <b>Current</b>
 
-Animation Preview!
-There is an GUI bone (primitive) editor
-The shape supported now is: 'linear'
-Multiple Key Frames (shading the last bones from the past KF)
-Supporting a image(by url) as 'skin' to the bones
-Being able to move Bones
-Added a primitive bone edition panel
-Keyboard shortcuts
-Exporting the code in the console
-A simple help
+* Animation Preview!
+* There is an GUI bone (primitive) editor
+* The shape supported now is: 'linear'
+* Multiple Key Frames (shading the last bones from the past KF)
+* Supporting a image(by url) as 'skin' to the bones
+* Being able to move Bones
+* Added a primitive bone edition panel
+* Keyboard shortcuts
+* Exporting the code in the console
+* A simple help
 
 
 <b>Main Todo list</b>
