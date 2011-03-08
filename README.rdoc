@@ -40,16 +40,18 @@ Supporting a image(by url) as 'skin' to the bones
 Being able to move Bones  
 Added a primitive bone edition panel  
 Keyboard shortcuts
-Exporting the code in the console  
+Exporting the code in the console
+A simple help  
 
 
 <b>Main Todo list</b>
 
-1. Make a simple animation player (scalable)  
-2. Make it able to import animations  
-3. Improve bone edition panel  
-4. Import the code in the console  
-5. Implement all InMotion core methods  
+1. Make a simple animation player (scalable)
+2. Make each frame have its own duration (a input at each frame)
+3. Make it able to import animations  
+4. Improve bone edition panel  
+5. Import the code in the console  
+6. Implement all InMotion core methods  
   
 
 

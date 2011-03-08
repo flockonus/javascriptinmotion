@@ -26,6 +26,7 @@
 		<script type="text/javascript">
 			//jQuery.noConflict();
 			j = jQuery;
+			f = FlockonUS;
 		</script>
 		
 		
@@ -44,6 +45,7 @@
 				$im = new InMotion('drawingtable')
 				// TODO setar funcao de resize ao invez.
 				$e = new Editor()
+				setTimeout( '$e.resize()', 500 );
 
 				$e.add_key_frame()
 				
@@ -84,11 +86,17 @@
 		<div id="left">
 			
     		<div id="header">
-        		<h3>JavaScript In Motion v0.2.1</h3>
-						 <em style="font-size: 70%, vertical-align: top;">by <a href="http://twitter.com/flockonus">@FlockonUS</a> <a href="http://github.com/flockonus/javascriptinmotion">GitHub</a></em><br/>
-						 <a href="#mostrae" onclick=" j('.blackout:first').fadeIn() ;return false;"> HELP </a> 
+        		<h3>JavaScript In Motion v0.2.2</h3>
+							<em style="font-size: 70%, vertical-align: top;">
+						 	by <a href="http://twitter.com/flockonus" target="_blank">@FlockonUS</a> 
+							<a href="https://github.com/flockonus/javascriptinmotion" target="_blank" >GitHub</a>
+							<a href="#mostrae" style="color: #FF5;" onclick=" j('.blackout:first').fadeIn() ;return false;"> HELP! </a>
+							</em>
+						   
 						<span class="button blue bigrounded" title="Shortcut: P" onclick="$e.set_mode('preview0')" id="play_bt">  PLAY &gt; </span>
     		</div>
+				
+				
 			<div id="bonepane">
 				<h4>Bone Panel</h4>
 				<div class="content">
@@ -97,7 +105,8 @@
 						<input type="hidden" name="original_name" /> 
 						Name:<input type="text" name="name" size="14" maxlength="14" /> <br/>
 						Image Url:<input type="text" name="img_url" size="14" maxlength="255" /> <br/>
-						<button type="submit" onc > OK</button>
+						<!--button type="submit" onc > OK</button-->
+						<span class="button blue small" title="Shortcut: RETURN" onclick="j(this).parents('form').submit();">ok</span>
 					</form>
 				</div>
 			</div> 
@@ -105,9 +114,11 @@
 			
 			<div id="timeline">
 				<h4>Timeline</h4>
-				<a href="javascript: $e.add_key_frame();" title="Shortcut: A" >[+]</a> <!-- alert('Not REALLY implemented YET!'); return(0); -->
-					<a href="#previous" onclick="$e.focus_key_frame('prev'); return false;" title="Shortcut: PageUp" >/\</a>
-						<a href="#next" onclick="$e.focus_key_frame('next'); return false;" title="Shortcut: PageDown" >\/</a>
+				<span class="button blue bigrounded" title="Shortcut: A" onclick="$e.add_key_frame();" >  ADD+ FRAME </span>
+				<!-- NOT USEFUL? =/
+				span class="button blue bigrounded" title="Shortcut: PageUp" onclick="$e.focus_key_frame('prev');" > /\ </span>
+				<span class="button blue bigrounded" title="Shortcut: PageDown" onclick="$e.focus_key_frame('next');" > \/ </span-->
+				
 				<dl id="keyframes"> <!-- reflects the state of the var $kfs[] -->
 				</dl>
 			</div>
@@ -133,13 +144,44 @@
 		
 		
 		
-	<div id="help1" class="blackout"> .
-		<div class="modal">
+	<div class="blackout"> .
+		<div class="modal" id="help1">
 			<div class="header">
-				Oi cabeçaça <a onclick="j('.blackout:first').fadeOut()" class="close"> [X] </a>
+				InMotion: Quick Help <a onclick="j('.blackout:first').fadeOut()" class="close"> [X] </a>
 			</div>
 			<div class="body">
-				OI CORPO
+				<h2> What is this? </h2>
+				<p>
+					To know more about the idea of this project, please refer to the <a href="https://github.com/flockonus/javascriptinmotion" target="_blank" >GitHub</a> page
+				</p>
+				<br>
+				<br>
+				<!--h2> How to use </h2>
+				<p> 
+					The buttons are your friends! And they have shortcuts (just hover a button to see each) <br>
+				</p-->
+				<h2> Quick Start </h2>
+				<div style="text-align: left;">
+					This small tut, is assuming you just oppened the page, didn't touch any button (press <strong>F5</strong> to clear all)<br>
+					<br>
+					1. Click <strong>2 points</strong> at the white canvas<br>
+					1.1 =&gt; You just made a <strong>BONE</strong><br>
+					<br>
+					2. Click the Button <strong>ADD+ FRAME</strong> (below Timeline)<br>
+					2.1 =&gt; You just added one more <strong>KeyFrame</strong> to the composition<br>
+					2.2 =&gt; On this new <strong>KeyFrame</strong> the bone you drawn can assume a new position<br>
+					<br>
+					3. Click any <strong>edge of the Bone</strong>, and <strong>click again</strong> anywhere on the Canvas<br>
+					3.1 =&gt; You have just setted a animation for the bone, very well!<br>
+					<br>
+					4. Click <strong>PLAY &gt;</strong>, to animate what you just created!<br>
+					4.1 =&gt; That is a small preview, the possibilities here are huge!<br>
+					<br>
+					5. To add a image as skin to the bone paste this: <strong>exp/marara.png</strong> at the field <strong>Image Url</strong> (under the Bone Panel) and click the <strong>ok</strong> button<br>
+					5.1 =&gt; You applied a image to the bone, bounded by it's limits. You can add any valid Image Url there.<br>
+					
+				  
+				</div>
 			</div> 
 		</div>
 	</div>

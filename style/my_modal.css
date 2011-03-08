@@ -1,6 +1,6 @@
 .blackout {
 	position: absolute;
-	z-index: 100;
+	z-index: 101;
 	top: 0px;
 	left: 0px;
 	margin: 0 0 0 0;
@@ -16,7 +16,7 @@
 
 .blackout .modal {
 	color: #333;
-	margin: 10% 10% 10% 10%;
+	margin: 3%;
 	border: groove #71B0B8 2px;
 	text-align: center;
 	vertical-align: middle;
