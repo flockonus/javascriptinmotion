@@ -2,7 +2,7 @@
 
 == JavaScript InMotion
 
-The designer friendly 2D Canvas animation framework. <b>LIVE DEMO</b> => http://inmotion.jaeh.net  
+The designer friendly 2D Canvas animation framework. <b>LIVE DEMO</b> => http://flockonus.github.io/javascriptinmotion/  
 v0.2.2
 
 <b>What is the idea ?</b>
