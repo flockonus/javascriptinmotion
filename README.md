@@ -22,9 +22,9 @@ im.create_animation('preview', 'base'); // Create a new animation from the regis
 
 im.play('preview'); // Set the animation as playing
 
-routine = setInterval(loop_preview(), 30 ); // set a animation routine
+routine = setInterval(loopPreview, 30 ); // set a animation routine
 
-function loop_preview(){
+function loopPreview(){
   if( im.step(true) ) clearInterval( routine );
 }
 ```
